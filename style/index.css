@@ -1,4 +1,15 @@
-/* I have major problems with my nav. bar and image */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+}
+.top-nav{
+  display:flex;
+  flex-direction: row;
+}
 .logo{
   color: #0A1B32;
   font-family: "Circular Std";
@@ -20,10 +31,9 @@
   line-height: 160%;
   letter-spacing: -0.6px;
 }
-
-section{
-  display: inline-block;
-  }
+.wrapper{
+  display: flex;
+}
 
 .nav{
   color: #1B0A42;
@@ -32,21 +42,17 @@ section{
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
   letter-spacing: 0.32px;
 }
 
-.header{
-  display:inline-flex;
+
+
+.nav-l li{
+  list-style-type: none; /*Removes the bullets.*/
+  align-items: flex-start;
 }
 
-.nav-l{
-  list-style-type: none; /*Removes the bullets.*/
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  float: left;
-}
 
 li {
   float: left;
@@ -55,7 +61,6 @@ li {
   }
 
 li a {
-  display: block;
   color: #1B0A42;
   text-align: center;
   padding: 14px 16px;
@@ -64,24 +69,25 @@ li a {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
   letter-spacing: 0.32px;
 }
-/* nothing worked for me to make a navigation bar 
-with a group of items on the rigt and the left side of the page
-
-.nav-r li {
-  margin-right: 67px;
-} */
 
 
 .nav-r{
-  list-style-type: none; /*Removes the bullets.*/
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  float: right;
-  
+  margin-left: auto;
+  overflow: auto;
+  margin-top: 30px;
+  margin-right: 67px;
+  display: flex;
+  align-items: flex-end;
+}
+.nav-r li{
+  list-style-type: none;
+}
+
+.sign-in{
+  margin-left: auto;
 }
 
 .main-title{
@@ -94,11 +100,16 @@ with a group of items on the rigt and the left side of the page
   font-size: 72px;
   font-style: normal;
   font-weight: 400;
-  line-height: 76px; /* 105.556% */
+  line-height: 76px;
   letter-spacing: 1.44px;
 
 }
+
+.main-content{
+  display: flex;
+  flex-direction: column;
   
+}
 .main-info{
   max-width: 583px;
   width: 100%;
@@ -132,8 +143,7 @@ with a group of items on the rigt and the left side of the page
   border: none;
 }
 
-/* sign up button has a padding or something similar and that does not dissappear. */
-.signup-btn{
+/* .signup-btn{
   flex-shrink: 0;
   border-radius: 6px;
   background-color: #33A2E0;
@@ -143,12 +153,10 @@ with a group of items on the rigt and the left side of the page
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
   letter-spacing: 0.32px;
   border: none;
-}
-
-/* Something is wrong with the images but I cannot tell what and why?
+} */
 
 img{
   margin-top: 221px;
@@ -160,4 +168,4 @@ img{
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-} */
+}
